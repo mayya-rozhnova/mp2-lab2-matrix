@@ -138,8 +138,8 @@ TEST(TMatrix, can_add_matrices_with_equal_size)
     for (int j = i; j < 5; j++) {
       m[i][j] = i + 2 * j;
 	  m1[i][j] = i + 3 * j;
+	  rm[i][j] = 2 * i + 5 * j;
 	}
-  rm = m + m1;
    EXPECT_EQ(rm, m + m1);
 }
 
@@ -156,8 +156,8 @@ TEST(TMatrix, can_subtract_matrices_with_equal_size)
     for (int j = i; j < 5; j++) {
       m[i][j] = i + 2 * j;
 	  m1[i][j] = i + 3 * j;
+	  rm[i][j] = -j;
 	}
-  rm = m - m1;
    EXPECT_EQ(rm, m - m1);
 }
 
